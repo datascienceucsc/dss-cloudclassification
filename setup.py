@@ -30,7 +30,7 @@ if __name__ == "__main__":
         packages=find_packages(include=['dss_kaggle_clouds']),
         entry_points = {
             'console_scripts': [
-                "dss_kaggle_run = dss_kaggle_clouds:run"
+                "kaggle_clouds = dss_kaggle_clouds:run"
             ]
         },
         url="https://github.com/datascienceslugs/dss-cloudclassification",
