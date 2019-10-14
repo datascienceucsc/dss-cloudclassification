@@ -3,7 +3,8 @@ import sys
 # Load third party modules for environment testing
 import numpy as np
 import pandas as pd
-import tensorflow
+import tensorflow as tf
+
 
 def run():
     """Stub entry point, can be modified later"""
