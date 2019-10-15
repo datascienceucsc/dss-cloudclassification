@@ -9,6 +9,7 @@ verify_ssl = true
 tensorflow = "==2.0.0"
 pandas = "==0.25.1"
 numpy = "==1.17.2"
+click = "==7.0"
 
 [requires]
 python_version = "3.6"

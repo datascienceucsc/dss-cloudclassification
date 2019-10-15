@@ -32,8 +32,6 @@ if __name__ == "__main__":
         include_package_data=True,
         name="datascience_kaggle_clouds",
         packages=find_packages(include=["dss_kaggle_clouds"]),
-        entry_points={"console_scripts": [
-            "kaggle_clouds = dss_kaggle_clouds:run"]},
         url="https://github.com/datascienceslugs/dss-cloudclassification",
         version="0.1.0",
         zip_safe=False,
