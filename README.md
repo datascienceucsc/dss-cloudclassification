@@ -7,4 +7,17 @@ Your work on this project should follow our [Contribution guidelines](https://gi
 
 This uses [pipenv](https://pipenv-fork.readthedocs.io/en/latest/) to manage a vitual environment, and we're limiting ourself to 3.6.2 to run on Hummingbird. Using `pipenv run pip freeze`, one can create a [requirements.txt](./requirements.txt) file from the [Pipfile](./Pipfile) that can be used to install locked dependencies on other systems/servers.
 
+To install stuff and be in virtual environment.
 
+```
+## change so that you're in the directory# install pipenv or install it with pip-python
+python3 -m pip install --user pipenv
+# install packages
+python3 -m pipenv install --skip-lock
+# enter the virtualenv
+python3 -m pipenv shell
+# install the python package
+python3 setup.py install
+# run the script to test
+kaggle_clouds
+```
