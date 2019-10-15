@@ -46,7 +46,6 @@ Enter the virtual environment
 
 ```
 python3 -m pipenv shell
-
 ```
 
 Install our code as a module in the virtualenv:
@@ -69,4 +68,4 @@ python3 setup.py install  # to reinstall the package
 python3 run.py data/raw # ... run the script
 ```
 
-You can type `exit` to leave the virtual environment. (And `python3 -m pipenv shell` to re-enter)
+You can type `exit` to leave the virtual environment. (and `python3 -m pipenv shell` to re-enter)
