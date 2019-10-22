@@ -1,5 +1,5 @@
-/data/raw/*
-/data/processed/*
+/data/train_images/*
+/data/test_images/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
