@@ -1,6 +1,6 @@
 /data/train_images/train_images/*
 /data/test_images/*
-/data/*.csv
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
