@@ -1,4 +1,4 @@
-/data/train_images/*
+/data/train_images/train_images/*
 /data/test_images/*
 
 # Byte-compiled / optimized / DLL files
