@@ -87,4 +87,4 @@ venv.bak/
 .mypy_cache/
 
 # data
-*.jpeg
+*.jpg
