@@ -83,5 +83,3 @@ def U_net(optimizer, activation):
     model = tf.keras.Model(inputs, output)
     model.compile(optimizer = optimizer, loss = 'categorical_crossentropy')
     return model
-
-model = U_net(optimizer = 'SGD', activation = 'relu')
