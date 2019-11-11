@@ -8,19 +8,18 @@
 # specific to the image sizes in this compeitition and would require a 
 # fair bit of tweaking to adapt to other problems.
 
-
+#%%
 import tensorflow as tf
 import pdb
 from tensorflow.keras.layers import (Dense, Conv2D, Conv2DTranspose, 
     MaxPool2D, concatenate, ZeroPadding2D)
 
-
-def U_net(optimizer, activation, metrics):
+#%%
+def U_net(optimizer, activation, loss, metrics):
     """
     Parameters:
     - optimizer (String): Keras optimizer to use
-    - activation (String): Keras layer activation function to use in hidden 
-    layers
+    - activation (String): Keras layer activation function to use in hidden layers
     - metrics to use for model evaluation
 
     Returns: (Model)
@@ -95,7 +94,6 @@ def U_net(optimizer, activation, metrics):
     output = Dense(4, activation = 'softmax')(conv_18)
 
     model = tf.keras.Model(inputs, output)
-    model.compile(optimizer = optimizer, loss = 'categorical_crossentropy',
-                  metrics = metrics)
+    model.compile(optimizer = optimizer, loss = loss,
+                  metrics = [metrics])
     return model
-s

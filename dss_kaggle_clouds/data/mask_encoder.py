@@ -8,7 +8,7 @@
 import pandas as pd
 import numpy as np
 import os
-import PIL
+import Pillow
 
  
 def encode_mask(img):
@@ -38,7 +38,7 @@ def encode_mask(img):
 
 if __name__ == 'main':
     submission = pd.read_csv('../../data/raw/sample_submission.csv')
-    masks  = [np.array(PIL.Image.open('../../models/%s' % filename))
+    masks  = [np.array(Pillow.Image.open('../../models/%s' % filename))
              for filename in os.listdir('../../models')]
     submission['EncodedPixels'] = map(encode_mask, masks)
     

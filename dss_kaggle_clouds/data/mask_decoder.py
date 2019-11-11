@@ -9,7 +9,7 @@
 
 import pandas as pd    
 import numpy as np
-from PIL import Image
+from Pillow import Image
 
 def rle2mask(row, height = 1400, width = 2100):
     """
