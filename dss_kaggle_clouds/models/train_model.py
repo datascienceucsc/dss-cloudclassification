@@ -62,7 +62,7 @@ history = model.fit_generator(train_generator, epochs = 10, workers = -1,
  #%%
 hist_df = pd.DataFrame(history.history) 
 hist_df.to_csv('../../models/training_history.csv')
-
+h
 tf.saved_model.save('../../models/1/')
 
 # uncomment following code to generate predictions on a local machine
