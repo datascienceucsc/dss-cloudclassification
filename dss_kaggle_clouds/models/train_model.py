@@ -47,7 +47,7 @@ train_mask_generator = train_datagen.flow_from_directory(
                                 batch_size = 16)
 
 #%%
-train_generator = list(zip(train_image_generator, train_mask_generator))
+train_generator = (pair for pair in zip(train_image_generator, train_mask_generator))
 
 #%%
 model = U_net(optimizer = 'SGD', activation = 'relu',
