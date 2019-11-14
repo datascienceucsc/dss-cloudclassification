@@ -47,14 +47,16 @@ train_mask_generator = train_datagen.flow_from_directory(
                                 batch_size = 16)
 
 #%%
-train_generator = (pair for pair in zip(train_image_generator, train_mask_generator))
+train_generator = (pair for pair in
+     zip(train_image_generator, train_mask_generator))
 
 #%%
 model = U_net(optimizer = 'SGD', activation = 'relu',
               loss = dice_loss, metrics = [dice_coeff])
 
 #%%
-history = model.fit_generator(train_generator, epochs = 10, workers = -1,
+history = model.fit_generator(train_generator, epochs = 10,
+                              steps_per_epoch = sum(1 for x in train_generator),
                               use_multiprocessing = True)
 
 # saves outputs of the model for diagnostic and retraining
