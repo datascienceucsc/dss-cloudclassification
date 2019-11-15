@@ -10,6 +10,7 @@
 #SBATCH --error=apoirel_%j.out
 
 module load python/3.6.2
+module load numpy
 python train_model.py
 
 

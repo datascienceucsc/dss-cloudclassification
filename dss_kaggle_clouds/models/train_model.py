@@ -57,11 +57,11 @@ model = U_net(optimizer = 'SGD', activation = 'relu',
 #%%
 history = model.fit_generator(train_generator, epochs = 10,
                               steps_per_epoch = sum(1 for x in train_generator),
-                              use_multiprocessing = True)
+                              workers = -1)
 
 # saves outputs of the model for diagnostic and retraining
 
- #%%
+#%%
 hist_df = pd.DataFrame(history.history) 
 hist_df.to_csv('../../models/training_history.csv')
 
